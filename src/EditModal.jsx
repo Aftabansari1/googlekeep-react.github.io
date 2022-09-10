@@ -1,12 +1,18 @@
 import React from "react";
 
 const EditModal = () => {
+
+  // const updateHandler=()=>{
+  //   addItem.map((elem)=>{
+  //     console.log(elem)
+  //   })
+  // }
   return (
     <>
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -28,11 +34,11 @@ const EditModal = () => {
 
             <form>
              <div className="mb-3">
-                 <label for="title" className="form-label">Title </label>
+                 <label htmlFor="title" className="form-label">Title </label>
                  <input type="text" className="form-control" id="edittitle" placeholder="Enter your title"/>
              </div>
              <div className="mb-3">
-                 <label for="exampleInputPassword1" className="form-label">Description</label>
+                 <label htmlFor="exampleInputPassword1" className="form-label">Description</label>
                  <textarea name="desc" className="form-control" id="editdesc" rows="3" placeholder="Enter your description"></textarea>
              </div>
             </form>
@@ -43,6 +49,8 @@ const EditModal = () => {
                 type="button"
                 className="btn btn-primary"
                 data-bs-dismiss="modal"
+                // onClick={()=>{return updateHandler}}
+                // onClick={updateHandler}
               >
                Save
               </button>

@@ -25,14 +25,20 @@ function App() {
     )
 
   };
+  const editHandler=(id)=>{
+      // console.log(id);
+  }
 
   useEffect(()=>{
       localStorage.setItem('notes-app',JSON.stringify(addItem))
   },[addItem])
   const sort = addItem.sort((a,b)=>b.lastmodified-a.lastmodified)
 
+  // const [editId,setEditId]=useState("")
+
   return (
    <>
+    {/* <EditModal editId={editId} addItem={addItem} setAddItem={setAddItem} /> */}
     <EditModal/>
     <Header/>
     <CreateNote
@@ -46,6 +52,9 @@ function App() {
                    content={val.content}
                    lastmodified={val.lastmodified}
                    deleteItem = {onDelete}
+                   editItem={editHandler}
+                  addItem={addItem}
+                  // seteditId={setEditId}
                />
     })}
    </>
