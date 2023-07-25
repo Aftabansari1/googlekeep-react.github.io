@@ -11,7 +11,7 @@ import EditModal from './EditModal';
 function App() {
   const [addItem,setAddItem] = useState(JSON.parse(localStorage.getItem('notes-app')) || []);
   const addNote = (note) =>{
-    // alert("clicke");
+    // alert("clicked");
     setAddItem((prevData)=>{
       return [...prevData,note];
     })
